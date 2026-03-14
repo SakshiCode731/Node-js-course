@@ -1,0 +1,29 @@
+{
+  "name": "spotify",
+  "version": "1.0.0",
+  "description": "this is spotify clone for my app",
+  "keywords": [
+    "spotify",
+    "music"
+  ],
+  "homepage": "https://github.com/SakshiCode731/Node-js-course#readme",
+  "bugs": {
+    "url": "https://github.com/SakshiCode731/Node-js-course/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SakshiCode731/Node-js-course.git"
+  },
+  "license": "ISC",
+  "author": "sakshi",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "slugify": "^1.6.8"
+  }
+}
