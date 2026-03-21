@@ -1,7 +1,9 @@
-const kittySchema = new mongoose.Schema({
-  name: String,
+import mongoose from "mongoose";
+const TodoSchema = new mongoose.Schema({
+  title: {type:String, required:true, default:"Hey"},
   desc: String,
-  isDone: Boolean
+  isDone: Boolean,
+  days: Number
 });
 
-const Kitten = mongoose.model('Kitten', kittySchema);
+export const Todo = mongoose.model('Todo', TodoSchema);
