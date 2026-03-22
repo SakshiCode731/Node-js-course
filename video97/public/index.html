@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notes App</title>
+  <style>body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: white;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+li button {
+  margin-left: 10px;
+  background-color: red;
+}
+</style>
+</head>
+<body>
+
+  <input id="noteInput" placeholder="Write note">
+  <button onclick="addNote()">Add</button>
+
+  <ul id="notesList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
