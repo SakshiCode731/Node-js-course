@@ -1,14 +1,13 @@
-// Generate a dummy data in this format in a collection called employees in a 
-// db called company
+const express = require('express')
+const app = express()
+const port = 3000
 
-//{
-// name: :"sakshi",
-// salary: 50000,
-// langauge: "python",
-// city:"New York",
-// isManager: true
-// }
+app.set('view engine', 'ejs');
 
-// Generate 10 such document when a button called genearte data is clicked!
-// Create an Express app with mongoose to achieve it
-// Everytime the button is clicked, you should clear the collection
+app.get('/', (req, res) => {
+  res.render('index',{foo:'Foo'})
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
