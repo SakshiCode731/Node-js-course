@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskSpark</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <span class="badge">Productivity app</span>
+          <h1>TaskSpark</h1>
+          <p>Track tasks with a bright interface, fast filtering, and prioritized focus.</p>
+          <div class="hero-actions">
+            <button id="theme-toggle" class="btn btn-secondary">Switch theme</button>
+          </div>
+        </div>
+
+        <div class="hero-card stats-card">
+          <h2>Today's focus</h2>
+          <div class="stats-grid">
+            <div>
+              <span class="stat-label">Total tasks</span>
+              <strong id="total-count">0</strong>
+            </div>
+            <div>
+              <span class="stat-label">Pending</span>
+              <strong id="active-count">0</strong>
+            </div>
+            <div>
+              <span class="stat-label">Completed</span>
+              <strong id="completed-count">0</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="task-section">
+        <div class="task-form-card">
+          <h2>Create a new task</h2>
+          <form id="task-form">
+            <label>
+              Task title
+              <input id="task-title" type="text" placeholder="Example: Learn Express" />
+            </label>
+            <label>
+              Description
+              <textarea id="task-desc" rows="3" placeholder="Add a short note..."></textarea>
+            </label>
+            <label>
+              Priority
+              <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-primary">Add task</button>
+          </form>
+        </div>
+
+        <div class="task-list-card">
+          <div class="list-header">
+            <div>
+              <h2>My tasks</h2>
+              <p class="subtitle">Filter, search, and complete tasks instantly.</p>
+            </div>
+            <span id="count-label">Loading…</span>
+          </div>
+
+          <div class="toolbar">
+            <input id="task-search" type="search" placeholder="Search tasks..." />
+            <div class="filter-group">
+              <button class="filter-btn active" data-status="all">All</button>
+              <button class="filter-btn" data-status="active">Active</button>
+              <button class="filter-btn" data-status="completed">Done</button>
+            </div>
+          </div>
+
+          <div id="task-list" class="task-list"></div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
